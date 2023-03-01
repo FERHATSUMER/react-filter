@@ -16,6 +16,11 @@ function Home() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
+      <div className="dataContainer">
+    {
+        Data.
+    }
+      </div>
     </div>
   );
 }
