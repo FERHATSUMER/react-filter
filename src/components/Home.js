@@ -17,9 +17,23 @@ function Home() {
         />
       </div>
       <div className="dataContainer">
-    {
-        Data.
-    }
+        {Data.filter((val) => {
+          if (search == "") {
+            return val;
+          } else if (
+            val.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+          ) {
+            return val;
+          }
+        }).map((val) => {
+          return (
+            <div className="data" key={val.id}>
+              <img src={val.image} alt="" />
+              <h3>{val.title}</h3>
+              <p>{val.Description}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
